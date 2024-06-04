@@ -15,8 +15,9 @@ void test2() {
     std::array<Card, MAX_SUITS * MAX_RANK> deck = createDeck();
     shuffleDeck(deck);
     std::cout << toStringDeck(deck) << std::endl;
-    if (playBlackJack(deck))
-        std::cout << "You win!\n";
-    else
-        std::cout << "You lose!\n";
+    switch (playBlackJack(deck)) {
+        case BLACKJACK_PLAYER_WIN: std::cout << "You win!\n"; return;
+        case BLACKJACK_DEALER_WIN: std::cout << "You lose!\n"; return;
+        case BLACKJACK_TIE: std::cout << "Tie\n"; return;
+    }
 }

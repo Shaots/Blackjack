@@ -3,9 +3,17 @@
 
 #include "Card.h"
 
+
+enum BlackJackResult{
+    BLACKJACK_PLAYER_WIN,
+    BLACKJACK_DEALER_WIN,
+    BLACKJACK_TIE
+};
+
+
 // Если игрок побеждает, то return true
 // Иначе return else
-bool playBlackJack(const std::array<Card, MAX_SUITS * MAX_RANK>& deck);
+BlackJackResult playBlackJack(const std::array<Card, MAX_SUITS * MAX_RANK>& deck);
 
 
 char getPlayerChoice();
