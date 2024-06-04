@@ -101,3 +101,14 @@ void swapCard(Card& card1, Card& card2){
     card1 = card2;
     card2 = temp;
 }
+
+void shuffleDeck(std::array<Card, MAX_SUITS * MAX_RANK>& deck){
+    int card = 0;
+    for (int suit = 0; suit < MAX_SUITS; ++suit) {
+        for (int rank = 0; rank < MAX_RANK; ++rank) {
+            int swapIndex = getRandomNumber(0, 51);
+            swapCard(deck[card], deck[swapIndex]);
+            ++card;
+        }
+    }
+}
