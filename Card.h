@@ -1,6 +1,9 @@
 #ifndef BLACKJACK_CARD_H
 #define BLACKJACK_CARD_H
 
+#include <iostream>
+#include <cstring>
+
 enum Suit {
     SUIT_SPADE,     // Лопаты
     SUIT_HEART,     // Червы
@@ -31,4 +34,7 @@ struct Card {
     Suit suit;
     Rank rank;
 };
+
+std::string toString(const Card& card);
+
 #endif //BLACKJACK_CARD_H
