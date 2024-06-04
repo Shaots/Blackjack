@@ -65,5 +65,18 @@ std::string toString(const Card &card) {
             str2 = "";
             break;
     }
-    return str1 + str2;
+    return str1 + str2 + "\n";
+}
+
+std::array<Card, MAX_SUITS * MAX_RANK> createDeck() {
+    std::array<Card, MAX_SUITS * MAX_RANK> deck{};
+    int card = 0;
+    for (int suit = 0; suit < MAX_SUITS; ++suit) {
+        for (int rank = 0; rank < MAX_RANK; ++rank) {
+            deck[card].suit = static_cast<Suit>(suit);
+            deck[card].rank = static_cast<Rank>(rank);
+            ++card;
+        }
+    }
+    return deck;
 }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <array>
 
 enum Suit {
     SUIT_SPADE,     // Лопаты
@@ -36,5 +37,8 @@ struct Card {
 };
 
 std::string toString(const Card& card);
+
+// Целая колода
+std::array<Card, MAX_SUITS * MAX_RANK> createDeck();
 
 #endif //BLACKJACK_CARD_H
