@@ -1,4 +1,5 @@
 #include "Card.h"
+#include "supportFunc.h"
 
 std::string toStringCard(const Card &card) {
     std::string str1;

@@ -3,4 +3,4 @@ project(Blackjack)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Blackjack main.cpp Card.cpp)
+add_executable(Blackjack main.cpp Card.cpp supportFunc.cpp)
