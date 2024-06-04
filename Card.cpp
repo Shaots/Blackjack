@@ -1,6 +1,6 @@
 #include "Card.h"
 
-std::string toString(const Card &card) {
+std::string toStringCard(const Card &card) {
     std::string str1;
     switch (card.suit) {
         case SUIT_SPADE:

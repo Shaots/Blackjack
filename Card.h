@@ -36,7 +36,7 @@ struct Card {
     Rank rank;
 };
 
-std::string toString(const Card& card);
+std::string toStringCard(const Card& card);
 
 // Целая колода
 std::array<Card, MAX_SUITS * MAX_RANK> createDeck();
