@@ -42,6 +42,9 @@ std::string toStringCard(const Card& card);
 std::array<Card, MAX_SUITS * MAX_RANK> createDeck();
 
 
+std::string toStringDeck(std::array<Card, MAX_SUITS * MAX_RANK> deck);
+
+
 void swapCard(Card& card1, Card& card2);
 
 #endif //BLACKJACK_CARD_H
