@@ -1,5 +1,9 @@
 #include "BlackJack.h"
 
+const int scoreThreshold = 21;
+const int scoreThresholdDealer = 17;
+
+
 BlackJackResult playBlackJack(const std::array<Card, MAX_SUITS * MAX_RANK> &deck) {
     const Card* cardPtr = &(deck[0]);
     int pointDealer = 0;
@@ -23,7 +27,7 @@ BlackJackResult playBlackJack(const std::array<Card, MAX_SUITS * MAX_RANK> &deck
     pointPlayer += getCardValue(*(cardPtr++));
 
     while (true) {
-        if (pointPlayer > 21) {
+        if (pointPlayer > scoreThreshold) {
             if (countAcePlayer == 0) {
                 std::cout << "You have: " << pointPlayer << std::endl;
                 return BLACKJACK_DEALER_WIN;
@@ -44,7 +48,7 @@ BlackJackResult playBlackJack(const std::array<Card, MAX_SUITS * MAX_RANK> &deck
 
     // Если игрок не проиграл и у него не больше 21 очка, то тогда
     // дилер получает карты до тех пор, пока у него не получится в сумме 17 очков
-    while (pointDealer < 17) {
+    while (pointDealer < scoreThresholdDealer) {
         if (checkAce(*cardPtr))
             countAceDealer++;
         pointDealer += getCardValue(*cardPtr++);
