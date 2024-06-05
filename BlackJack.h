@@ -14,6 +14,9 @@ enum BlackJackResult{
 BlackJackResult playBlackJack(const std::array<Card, MAX_SUITS * MAX_RANK>& deck);
 
 
+bool checkAce(const Card& card);
+
+
 char getPlayerChoice();
 
 #endif //BLACKJACK_BLACKJACK_H
