@@ -11,9 +11,10 @@ void test1() {
 void test2() {
     srand(static_cast<unsigned int>(time(0)));
     Deck deck;
-    std::cout << deck.toString() << std::endl;
     deck.shuffleDeck();
     std::cout << deck.toString() << std::endl;
+    std::cout << "The first card has value: " << deck.dealCard().getCardValue() << std::endl;;
+    std::cout << "The second card has value: " << deck.dealCard().getCardValue() << std::endl;
 }
 /*
  *
