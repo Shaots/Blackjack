@@ -1,6 +1,7 @@
 #include "Card.h"
 #include "supportFunc.h"
 
+/*
 std::string toStringCard(const Card &card) {
     std::string str1;
     switch (card.suit) {
@@ -145,4 +146,4 @@ int getCardValue(const Card &card) {
             return 11;
     }
     return 0;
-}
+}*/

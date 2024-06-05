@@ -1,6 +1,7 @@
 
 #include "test.h"
 
+/*
 void test1() {
     srand(static_cast<unsigned int>(time(0)));
     std::array<Card, MAX_SUITS * MAX_RANK> deck = createDeck();
@@ -35,3 +36,4 @@ void test3() {
         case BLACKJACK_TIE: std::cout << "Tie\n"; return;
     }
 }
+*/

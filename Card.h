@@ -5,6 +5,7 @@
 #include <cstring>
 #include <array>
 
+/*
 enum Suit {
     SUIT_SPADE,     // Лопаты
     SUIT_HEART,     // Червы
@@ -52,5 +53,6 @@ void shuffleDeck(std::array<Card, MAX_SUITS * MAX_RANK>& deck);
 
 
 int getCardValue(const Card& card);
+*/
 
 #endif //BLACKJACK_CARD_H

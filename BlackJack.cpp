@@ -1,5 +1,6 @@
 #include "BlackJack.h"
 
+/*
 const int scoreThreshold = 21;
 const int scoreThresholdDealer = 17;
 
@@ -87,4 +88,4 @@ char getPlayerChoice() {
         flag = choice != 'h' && choice != 's';
     }
     return choice;
-}
+}*/
