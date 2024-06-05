@@ -35,7 +35,7 @@ public:
 public:
     Card(Suit suit = MAX_SUITS, Rank rank = MAX_RANK) : m_suit(suit), m_rank(rank) {}
 
-    std::string toStringCard() const;
+    std::string toString() const;
 
     int getCardValue() const;
 

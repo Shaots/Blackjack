@@ -2,7 +2,7 @@
 #include "supportFunc.h"
 
 
-std::string Card::toStringCard() const {
+std::string Card::toString() const {
     std::string str1;
     switch (m_suit) {
         case SUIT_SPADE:
