@@ -12,8 +12,8 @@ void test1();
 
 void test2();
 
-// Для случаев с тузами
-//void test3();*/
+
+void test3();
 
 
 #endif //BLACKJACK_TEST_H

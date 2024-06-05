@@ -2,21 +2,31 @@
 #define BLACKJACK_BLACKJACK_H
 
 #include "Card.h"
+#include "Deck.h"
 
 
-/*enum BlackJackResult{
-    BLACKJACK_PLAYER_WIN,
-    BLACKJACK_DEALER_WIN,
-    BLACKJACK_TIE
+class BlackJack{
+public:
+    enum BlackJackResult{
+        BLACKJACK_PLAYER_WIN,
+        BLACKJACK_DEALER_WIN,
+        BLACKJACK_TIE
+    };
+
+    static BlackJackResult playBlackJack(Deck &deck);
+
+private:
+    static char getPlayerChoice();
+
+    static bool checkAce(const Card& card);
 };
 
 
-BlackJackResult playBlackJack(const std::array<Card, MAX_SUITS * MAX_RANK>& deck);
 
 
-bool checkAce(const Card& card);
 
 
-char getPlayerChoice();*/
+
+
 
 #endif //BLACKJACK_BLACKJACK_H
