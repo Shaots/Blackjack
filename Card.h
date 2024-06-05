@@ -52,4 +52,5 @@ void shuffleDeck(std::array<Card, MAX_SUITS * MAX_RANK>& deck);
 
 
 int getCardValue(const Card& card);
+
 #endif //BLACKJACK_CARD_H

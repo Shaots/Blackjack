@@ -69,6 +69,7 @@ std::string toStringCard(const Card &card) {
     return str1 + str2 + "\n";
 }
 
+
 std::array<Card, MAX_SUITS * MAX_RANK> createDeck() {
     std::array<Card, MAX_SUITS * MAX_RANK> deck{};
     int card = 0;
@@ -82,7 +83,8 @@ std::array<Card, MAX_SUITS * MAX_RANK> createDeck() {
     return deck;
 }
 
-std::string toStringDeck(std::array<Card, MAX_SUITS * MAX_RANK> deck){
+
+std::string toStringDeck(std::array<Card, MAX_SUITS * MAX_RANK> deck) {
     int card = 0;
     std::string str{};
     for (int suit = 0; suit < MAX_SUITS; ++suit) {
@@ -94,15 +96,14 @@ std::string toStringDeck(std::array<Card, MAX_SUITS * MAX_RANK> deck){
 }
 
 
-
-
-void swapCard(Card& card1, Card& card2){
+void swapCard(Card &card1, Card &card2) {
     Card temp = card1;
     card1 = card2;
     card2 = temp;
 }
 
-void shuffleDeck(std::array<Card, MAX_SUITS * MAX_RANK>& deck){
+
+void shuffleDeck(std::array<Card, MAX_SUITS * MAX_RANK> &deck) {
     int card = 0;
     for (int suit = 0; suit < MAX_SUITS; ++suit) {
         for (int rank = 0; rank < MAX_RANK; ++rank) {
@@ -113,21 +114,35 @@ void shuffleDeck(std::array<Card, MAX_SUITS * MAX_RANK>& deck){
     }
 }
 
-int getCardValue(const Card& card){
+
+int getCardValue(const Card &card) {
     switch (card.rank) {
-        case RANK_2: return 2;
-        case RANK_3: return 3;
-        case RANK_4: return 4;
-        case RANK_5: return 5;
-        case RANK_6: return 6;
-        case RANK_7: return 7;
-        case RANK_8: return 8;
-        case RANK_9: return 9;
-        case RANK_10: return 10;
-        case RANK_JACK: return 10;
-        case RANK_QUEEN: return 10;
-        case RANK_KING: return 10;
-        case RANK_ACE: return 11;
+        case RANK_2:
+            return 2;
+        case RANK_3:
+            return 3;
+        case RANK_4:
+            return 4;
+        case RANK_5:
+            return 5;
+        case RANK_6:
+            return 6;
+        case RANK_7:
+            return 7;
+        case RANK_8:
+            return 8;
+        case RANK_9:
+            return 9;
+        case RANK_10:
+            return 10;
+        case RANK_JACK:
+            return 10;
+        case RANK_QUEEN:
+            return 10;
+        case RANK_KING:
+            return 10;
+        case RANK_ACE:
+            return 11;
     }
     return 0;
 }
