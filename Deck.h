@@ -11,11 +11,14 @@ public:
 
     void shuffleDeck();
 
+    const Card& dealCard();
+
 private:
     static void swapCard(Card &card1, Card &card2);
 
 private:
     std::array<Card, Card::MAX_RANK * Card::MAX_SUITS> m_deck;
+    int m_cardIndex;
 };
 
 

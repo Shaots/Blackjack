@@ -9,12 +9,13 @@ Deck::Deck() {
             ++card;
         }
     }
+    m_cardIndex = 0;
 }
 
 
 std::string Deck::toString() {
     std::string str{};
-    for(const auto& card: m_deck){
+    for (const auto &card: m_deck) {
         str += card.toString();
     }
     return str;
@@ -30,6 +31,12 @@ void Deck::shuffleDeck() {
             ++card;
         }
     }
+    m_cardIndex = 0;
+}
+
+
+const Card &Deck::dealCard() {
+    return m_deck[m_cardIndex++];
 }
 
 
@@ -38,6 +45,8 @@ void Deck::swapCard(Card &card1, Card &card2) {
     card1 = card2;
     card2 = temp;
 }
+
+
 
 
 
