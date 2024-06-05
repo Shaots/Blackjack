@@ -53,15 +53,16 @@ BlackJackResult playBlackJack(const std::array<Card, MAX_SUITS * MAX_RANK> &deck
             countAceDealer++;
         pointDealer += getCardValue(*cardPtr++);
         std::cout << "The dealer now has: " << pointDealer << '\n';
-    }
-    if (pointDealer > 21) {
-        if (countAceDealer == 0)
-            return BLACKJACK_PLAYER_WIN;
-        else {
-            countAceDealer--;
-            pointDealer -= 10;
+        if (pointDealer > scoreThreshold) {
+            if (countAceDealer == 0)
+                return BLACKJACK_PLAYER_WIN;
+            else {
+                countAceDealer--;
+                pointDealer -= 10;
+            }
         }
     }
+
 
     if (pointPlayer > pointDealer)
         return BLACKJACK_PLAYER_WIN;
