@@ -6,10 +6,10 @@
 #include "BlackJack.h"
 #include "Card.h"
 
-/*void test1();
+void test1();
 
 
-void test2();
+/*void test2();
 
 // Для случаев с тузами
 void test3();*/
