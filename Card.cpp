@@ -118,18 +118,6 @@ std::array<Card, MAX_SUITS * MAX_RANK> createDeck() {
 }
 
 
-std::string toStringDeck(std::array<Card, MAX_SUITS * MAX_RANK> deck) {
-    int card = 0;
-    std::string str{};
-    for (int suit = 0; suit < MAX_SUITS; ++suit) {
-        for (int rank = 0; rank < MAX_RANK; ++rank) {
-            str += toStringCard(deck[card++]);
-        }
-    }
-    return str;
-}
-
-
 void swapCard(Card &card1, Card &card2) {
     Card temp = card1;
     card1 = card2;
